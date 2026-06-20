@@ -1,0 +1,159 @@
+Exploratory trait–innovation summary
+Species in table: 84
+Phenotypes: TOTALINNOVATIONS2025, TOTALINNOVATIONS2025_ResEff, FOODINNO2025, FOODINNO2025_ResEff, TECHINNO2025, TECHINNO2025_ResEff
+
+Top positive Pearson correlations
+  1. TOTALINNOVATIONS2025_ResEff ~ Relative_brain_size: pearson_r = 0.680, p = 1.43e-11
+  2. TOTALINNOVATIONS2025_ResEff ~ DietBreadth: pearson_r = 0.637, p = 9.79e-11
+  3. TECHINNO2025 ~ Range.Size: pearson_r = 0.467, p = 8.53e-06
+
+Top negative Pearson correlations
+  1. TECHINNO2025_ResEff ~ Migration: pearson_r = -0.175, p = 0.114
+  2. TECHINNO2025_ResEff ~ Brain_size: pearson_r = -0.172, p = 0.14
+  3. FOODINNO2025 ~ Migration: pearson_r = -0.161, p = 0.146
+
+Top positive Spearman correlations
+  1. TECHINNO2025 ~ HabitatBreadth: spearman_rho = 0.349, p = 6.77e-05
+  2. TOTALINNOVATIONS2025 ~ HabitatBreadth: spearman_rho = 0.344, p = 0.000144
+  3. TOTALINNOVATIONS2025_ResEff ~ Relative_brain_size: spearman_rho = 0.322, p = 1.43e-11
+
+Top negative Spearman correlations
+  1. TECHINNO2025_ResEff ~ Mass: spearman_rho = -0.252, p = 0.159
+  2. TOTALINNOVATIONS2025_ResEff ~ Mass: spearman_rho = -0.242, p = 0.2
+  3. TECHINNO2025 ~ Mass: spearman_rho = -0.235, p = 0.312
+
+Predictors with sign flip between Pearson and Spearman
+  TECHINNO2025_ResEff ~ Relative_brain_size: r = -0.013, rho = 0.236
+  TECHINNO2025 ~ Relative_brain_size: r = -0.011, rho = 0.195
+
+Predictors with strong nonlinearity (quadratic improvement)
+  (none detected)
+
+Large Pearson vs Spearman gaps (>= 0.15)
+  TOTALINNOVATIONS2025_ResEff ~ DietBreadth: gap = 0.488
+  TOTALINNOVATIONS2025_ResEff ~ Relative_brain_size: gap = 0.358
+  TECHINNO2025_ResEff ~ Range.Size: gap = 0.256
+  TECHINNO2025_ResEff ~ Relative_brain_size: gap = 0.249
+  TECHINNO2025 ~ Range.Size: gap = 0.222
+  TECHINNO2025 ~ Relative_brain_size: gap = 0.205
+  TECHINNO2025_ResEff ~ HabitatBreadth: gap = 0.172
+
+Possible outliers (|standardized residual| > 2.5)
+  TOTALINNOVATIONS2025 ~ Brain_size: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ Brain_size: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ Brain_size: Larus_argentatus
+  TOTALINNOVATIONS2025 ~ Relative_brain_size: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ Relative_brain_size: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ Relative_brain_size: Larus_argentatus
+  TOTALINNOVATIONS2025 ~ Mass: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ Mass: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ Mass: Larus_argentatus
+  TOTALINNOVATIONS2025 ~ GenerationLength: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ GenerationLength: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ GenerationLength: Larus_argentatus
+  TOTALINNOVATIONS2025 ~ Range.Size: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ Range.Size: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ Range.Size: Larus_argentatus
+  TOTALINNOVATIONS2025 ~ Range.Size: Calonectris_borealis
+  TOTALINNOVATIONS2025 ~ HabitatBreadth: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ HabitatBreadth: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ DietBreadth: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ DietBreadth: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ DietBreadth: Larus_argentatus
+  TOTALINNOVATIONS2025 ~ UrbanFULL: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ UrbanFULL: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ UrbanFULL: Larus_argentatus
+  TOTALINNOVATIONS2025 ~ Migration: Passer_domesticus
+  TOTALINNOVATIONS2025 ~ Migration: Falco_peregrinus
+  TOTALINNOVATIONS2025 ~ Migration: Larus_argentatus
+  TOTALINNOVATIONS2025_ResEff ~ Brain_size: Passer_domesticus
+  TOTALINNOVATIONS2025_ResEff ~ Relative_brain_size: Passer_domesticus
+  TOTALINNOVATIONS2025_ResEff ~ Mass: Corvus
+  TOTALINNOVATIONS2025_ResEff ~ GenerationLength: Corvus
+  TOTALINNOVATIONS2025_ResEff ~ Range.Size: Corvus
+  TOTALINNOVATIONS2025_ResEff ~ HabitatBreadth: Corvus
+  TOTALINNOVATIONS2025_ResEff ~ DietBreadth: Passer_domesticus
+  TOTALINNOVATIONS2025_ResEff ~ Migration: Corvus
+  FOODINNO2025 ~ Brain_size: Passer_domesticus
+  FOODINNO2025 ~ Brain_size: Falco_peregrinus
+  FOODINNO2025 ~ Brain_size: Aquila_chrysaetos
+  FOODINNO2025 ~ Brain_size: Larus_argentatus
+  FOODINNO2025 ~ Relative_brain_size: Passer_domesticus
+  FOODINNO2025 ~ Relative_brain_size: Falco_peregrinus
+  FOODINNO2025 ~ Relative_brain_size: Larus_argentatus
+  FOODINNO2025 ~ Mass: Passer_domesticus
+  FOODINNO2025 ~ Mass: Falco_peregrinus
+  FOODINNO2025 ~ Mass: Aquila_chrysaetos
+  FOODINNO2025 ~ Mass: Larus_argentatus
+  FOODINNO2025 ~ GenerationLength: Passer_domesticus
+  FOODINNO2025 ~ GenerationLength: Falco_peregrinus
+  FOODINNO2025 ~ GenerationLength: Aquila_chrysaetos
+  FOODINNO2025 ~ GenerationLength: Larus_argentatus
+  FOODINNO2025 ~ Range.Size: Passer_domesticus
+  FOODINNO2025 ~ Range.Size: Larus_argentatus
+  FOODINNO2025 ~ HabitatBreadth: Passer_domesticus
+  FOODINNO2025 ~ DietBreadth: Passer_domesticus
+  FOODINNO2025 ~ DietBreadth: Falco_peregrinus
+  FOODINNO2025 ~ DietBreadth: Larus_argentatus
+  FOODINNO2025 ~ UrbanFULL: Passer_domesticus
+  FOODINNO2025 ~ UrbanFULL: Falco_peregrinus
+  FOODINNO2025 ~ UrbanFULL: Aquila_chrysaetos
+  FOODINNO2025 ~ Migration: Passer_domesticus
+  FOODINNO2025 ~ Migration: Falco_peregrinus
+  FOODINNO2025 ~ Migration: Larus_argentatus
+  FOODINNO2025_ResEff ~ Brain_size: Passer_domesticus
+  FOODINNO2025_ResEff ~ Relative_brain_size: Passer_domesticus
+  FOODINNO2025_ResEff ~ Mass: Passer_domesticus
+  FOODINNO2025_ResEff ~ GenerationLength: Passer_domesticus
+  FOODINNO2025_ResEff ~ DietBreadth: Passer_domesticus
+  TECHINNO2025 ~ Brain_size: Passer_domesticus
+  TECHINNO2025 ~ Brain_size: Hirundo_rustica
+  TECHINNO2025 ~ Brain_size: Falco_peregrinus
+  TECHINNO2025 ~ Brain_size: Larus_argentatus
+  TECHINNO2025 ~ Relative_brain_size: Passer_domesticus
+  TECHINNO2025 ~ Relative_brain_size: Hirundo_rustica
+  TECHINNO2025 ~ Relative_brain_size: Falco_peregrinus
+  TECHINNO2025 ~ Relative_brain_size: Larus_argentatus
+  TECHINNO2025 ~ Mass: Passer_domesticus
+  TECHINNO2025 ~ Mass: Hirundo_rustica
+  TECHINNO2025 ~ Mass: Falco_peregrinus
+  TECHINNO2025 ~ Mass: Larus_argentatus
+  TECHINNO2025 ~ GenerationLength: Passer_domesticus
+  TECHINNO2025 ~ GenerationLength: Hirundo_rustica
+  TECHINNO2025 ~ GenerationLength: Falco_peregrinus
+  TECHINNO2025 ~ GenerationLength: Larus_argentatus
+  TECHINNO2025 ~ Range.Size: Passer_domesticus
+  TECHINNO2025 ~ Range.Size: Falco_peregrinus
+  TECHINNO2025 ~ Range.Size: Larus_argentatus
+  TECHINNO2025 ~ Range.Size: Calonectris_borealis
+  TECHINNO2025 ~ HabitatBreadth: Passer_domesticus
+  TECHINNO2025 ~ HabitatBreadth: Hirundo_rustica
+  TECHINNO2025 ~ HabitatBreadth: Falco_peregrinus
+  TECHINNO2025 ~ DietBreadth: Passer_domesticus
+  TECHINNO2025 ~ DietBreadth: Hirundo_rustica
+  TECHINNO2025 ~ DietBreadth: Falco_peregrinus
+  TECHINNO2025 ~ DietBreadth: Larus_argentatus
+  TECHINNO2025 ~ UrbanFULL: Passer_domesticus
+  TECHINNO2025 ~ UrbanFULL: Hirundo_rustica
+  TECHINNO2025 ~ UrbanFULL: Falco_peregrinus
+  TECHINNO2025 ~ Migration: Passer_domesticus
+  TECHINNO2025 ~ Migration: Hirundo_rustica
+  TECHINNO2025 ~ Migration: Falco_peregrinus
+  TECHINNO2025 ~ Migration: Larus_argentatus
+  TECHINNO2025_ResEff ~ Brain_size: Passer_domesticus
+  TECHINNO2025_ResEff ~ Brain_size: Falco_peregrinus
+  TECHINNO2025_ResEff ~ Relative_brain_size: Passer_domesticus
+  TECHINNO2025_ResEff ~ Relative_brain_size: Falco_peregrinus
+  TECHINNO2025_ResEff ~ Mass: Passer_domesticus
+  TECHINNO2025_ResEff ~ Mass: Falco_peregrinus
+  TECHINNO2025_ResEff ~ GenerationLength: Passer_domesticus
+  TECHINNO2025_ResEff ~ GenerationLength: Falco_peregrinus
+  TECHINNO2025_ResEff ~ Range.Size: Passer_domesticus
+  TECHINNO2025_ResEff ~ Range.Size: Larus_argentatus
+  TECHINNO2025_ResEff ~ HabitatBreadth: Passer_domesticus
+  TECHINNO2025_ResEff ~ DietBreadth: Passer_domesticus
+  TECHINNO2025_ResEff ~ DietBreadth: Falco_peregrinus
+  TECHINNO2025_ResEff ~ UrbanFULL: Passer_domesticus
+  TECHINNO2025_ResEff ~ Migration: Passer_domesticus
+  TECHINNO2025_ResEff ~ Migration: Hirundo_rustica
+  TECHINNO2025_ResEff ~ Migration: Falco_peregrinus

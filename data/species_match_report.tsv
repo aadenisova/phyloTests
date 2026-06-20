@@ -1,0 +1,9 @@
+metric	value
+species_in_original_tree	11167
+species_in_traits_table	8887
+species_matched	7995
+min_research_effort	200
+species_excluded_low_research_effort	7709
+species_final	286
+missing_in_traits_table	3172
+missing_in_tree	892

@@ -189,7 +189,7 @@ pgls_fit <- function(tree, dat, formula, scale_terms = NULL) {
     formula,
     data = d,
     phy = tree,
-    model = "BM",
+    model = "lambda",
     boot = 0
   )
 }
