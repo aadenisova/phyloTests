@@ -10,7 +10,9 @@ suppressPackageStartupMessages({
 PHENOTYPE <- "TOTALINNOVATIONS2025_ResEff"
 ROOT <- normalizePath(".", wins = FALSE)
 BASE <- file.path(ROOT, "results", PHENOTYPE)
-OUT <- file.path(BASE, "figures", "contMap_fan_phylopic.pdf")
+# OUT <- file.path(BASE, "figures", "contMap_fan_phylopic.pdf")
+OUT <- file.path(BASE, "figures", "contMap_fan_phylopic.png")
+
 CACHE <- file.path(ROOT, "data", "phylopic_cache.rds")
 dir.create(dirname(OUT), recursive = TRUE, showWarnings = FALSE)
 
@@ -38,13 +40,30 @@ saveRDS(cache, CACHE)
 imgs <- lapply(binomial, function(nm) cache[[nm]])
 
 cm <- contMap(tree, x, plot = FALSE, lut = c("blue", "white", "red"))
-pdf(OUT, width = 14, height = 8)
+# pdf(OUT, width = 14, height = 8)
+png(
+  OUT,
+  width = 4000,
+  height = 2400,
+  res = 300,
+  bg = "transparent"
+)
 par(mar = c(1, 1, 2, 1), xpd = NA)
 plot(cm, type = "arc", fsize = 0.7, outline = FALSE, lwd = 3)
-title("Total innovation (research-adjusted)", cex.main = 1.2)
 
 pp <- get("last_plot.phylo", envir = .PlotPhyloEnv)
-img_h <- 0.02
+img_h <- 0.015
+
+img_scale <- c(
+  "Sarcoramphus papa"   = 0.65,
+  "Gypaetus barbatus"   = 0.65,
+  "Aquila chrysaetos"   = 0.65,
+  "Anas platyrhynchos"  = 0.70,
+  "Clangula hyemalis"   = 0.70,
+  "Bucephala clangula"  = 0.70,
+  "Gallinula chloropus" = 0.70
+)
+
 for (t in seq_len(Ntip(tree))) {
   if (is.null(imgs[[t]])) next
   xy <- c(pp$xx[as.character(t)], pp$yy[as.character(t)])
@@ -58,8 +77,26 @@ for (t in seq_len(Ntip(tree))) {
   srt <- if (aa > 90 && aa < 270) 180 + aa else aa
   dir <- c(cos(srt * pi / 180), sin(srt * pi / 180))
   if (aa > 90 && aa < 270) dir <- -dir
-  pos <- xy + dir * (strwidth(tt, cex = pp$cex) + img_h * 0.7)
-  add_phylopic_base(img = imgs[[t]], x = pos[1], y = pos[2], height = img_h)
+  # pos <- xy + dir * (strwidth(tt, cex = pp$cex) + img_h * 0.8)
+  h <- img_h
+  if (lab %in% names(img_scale))
+      h <- img_h * img_scale[lab]
+
+  pos <- xy + dir * (strwidth(tt, cex = pp$cex) + h * 0.8)
+
+  # add_phylopic_base(img = imgs[[t]], x = pos[1], y = pos[2], height = img_h)
+  
+
+  if (lab %in% names(img_scale))
+      h <- img_h * img_scale[lab]
+
+  add_phylopic_base(
+      img = imgs[[t]],
+      x = pos[1],
+      y = pos[2],
+      height = h
+  )
 }
+
 dev.off()
 message("Saved: ", OUT)
